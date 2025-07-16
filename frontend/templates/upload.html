@@ -1,0 +1,31 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Certificate</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📤 Upload Certificate</h1>
+        <form action="/admin/upload" method="POST" enctype="multipart/form-data">
+            <input type="text" name="student_name" placeholder="Student Name" required>
+            <input type="text" name="course" placeholder="Course Name" required>
+            <input type="text" name="wallet_address" placeholder="Student Wallet Address" required>
+            <input type="file" name="certificate_file" accept="application/pdf,image/*" required>
+            <button type="submit">Upload</button>
+        </form>
+        <a class="button" href="/admin/dashboard">Back</a>
+    </div>
+</body>
+</html>
+
+
+
+
+

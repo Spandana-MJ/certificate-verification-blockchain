@@ -1,0 +1,143 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f0f4f8;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    max-width: 600px;
+    margin: 60px auto;
+    background: white;
+    padding: 40px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #2c3e50;
+    margin-bottom: 24px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+input[type="text"],
+input[type="file"],
+input[type="password"],
+input[type="email"],
+button,
+select {
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+input[readonly] {
+    background-color: #f3f3f3;
+    cursor: default;
+}
+
+button {
+    background-color: #2c7be5;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1b5fd1;
+}
+
+a.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 5px;
+    background-color: #27ae60;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+a.button:hover {
+    background-color: #1e874b;
+}
+
+a {
+    color: #2c7be5;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+label {
+    text-align: left;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.alert.success {
+    padding: 12px;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    margin-top: 15px;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    table-layout: fixed; 
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+    word-wrap: break-word; 
+    overflow-wrap: break-word; 
+}
+
+th {
+    background-color: #2c3e50;
+    color: white;
+}
+
+td {
+    background-color: #f9f9f9;
+}
+
+tr:nth-child(even) td {
+    background-color: #eef4fa;
+}
+
+td.hash-cell {
+    max-width: 100%; 
+    word-break: break-all; 
+    white-space: normal; 
+}
+
+
+
+ 
+
+
+ 
+
+
+

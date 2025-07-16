@@ -1,0 +1,44 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Login</title>
+</head>
+<body>
+    <h2>Admin Login</h2>
+    <button onclick="connectWallet()">Login with MetaMask</button>
+
+    <script>
+        async function connectWallet() {
+            if (window.ethereum) {
+                try {
+                    const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+                    const wallet = accounts[0];
+
+                    const res = await fetch('/admin/verify_wallet', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ wallet: wallet })
+                    });
+
+                    const data = await res.json();
+
+                    if (res.ok && data.status === 'success') {
+                        window.location.href = '/admin/dashboard';
+                    } else {
+                        alert(data.message || "Unauthorized wallet");
+                    }
+                } catch (err) {
+                    console.error(err);
+                    alert("MetaMask login failed");
+                }
+            } else {
+                alert("MetaMask not found. Please install it to continue.");
+            }
+        }
+    </script>
+</body>
+</html> 
+
+
+

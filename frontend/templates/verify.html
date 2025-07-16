@@ -1,0 +1,43 @@
+
+
+
+ <!DOCTYPE html>
+<html>
+<head>
+    <title>Verify Certificate</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 Public Certificate Verification</h1>
+        
+
+            <form method="POST" enctype="multipart/form-data">
+                <input type="file" name="certificate_file" required>
+                <input type="text" name="student_name" placeholder="Student Name" required>
+                <button type="submit">Verify</button>
+            </form>
+            
+       
+        {% if cert %}
+            <div class="alert success">
+                <p><strong>Verified!</strong></p>
+                
+                <p>Name: {{ cert.student_name }}</p>
+                <p>Issued At: {{ cert.timestamp }}</p>
+                <p><a href="https://gateway.pinata.cloud/ipfs/{{ cert.ipfs_hash }}" target="_blank">View Certificate</a></p>
+            </div>
+        {% elif error %}
+            <div class="alert">{{ error }}</div>
+        {% endif %}
+        <a class="button" href="/">Back</a>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+ 

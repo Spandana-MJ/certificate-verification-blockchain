@@ -1,0 +1,34 @@
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Download Certificate</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📥 Download Certificate</h1>
+
+        {% if ipfs_url %}
+        
+            <a class="button" href="{{ ipfs_url }}" target="_blank">View Certificate</a>
+            <a class="button" href="{{ ipfs_url }}" download target="_blank">Download</a>
+
+            <br><br>
+            <input type="text" value="{{ ipfs_url }}" readonly style="width:100%;"> 
+            <p>📤 Share this link to allow others to view or download the certificate.</p>
+        {% elif error %}
+            <p style="color:red;">{{ error }}</p>
+        {% endif %}
+
+        <br>
+        <a class="button" href="/student/dashboard">🔙 Back to Dashboard</a>
+    </div>
+</body>
+</html> 
+
+
+
